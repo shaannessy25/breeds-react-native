@@ -3,7 +3,7 @@ import React from 'react';
 import { StyleSheet, Text, View, FlatList, SafeAreaView } from 'react-native';
 import Items from './items'
 import { cats, dogs } from './breeds'
-
+import Properties from './itemProperty'
 
 
 export default function App() {
@@ -16,7 +16,7 @@ export default function App() {
         style={styles.list}
         data={cats}
         renderItem={({index, item}) => {
-          return <Items name={item.breed} />
+          return <Properties item={item} />
         }}
       />
     </SafeAreaView>
