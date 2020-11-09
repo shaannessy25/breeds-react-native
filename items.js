@@ -20,6 +20,6 @@ const styles = StyleSheet.create({
     width: "100%"
   },
   breed: {
-    fontSize: 24
+    fontSize: 30
   }
 })
