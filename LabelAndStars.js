@@ -5,9 +5,7 @@ export default function LabelAndStars({ text, value }){
     let stars = '★'
 
     for(let i = 1; i < 5; i += 1){
-        if( i < value ){
-            stars += '★'
-        }
+        i < value ? stars += '★' : stars += '☆'
     }
 
 
