@@ -1,6 +1,8 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import LabelAndBar from './LabelAndBar'
+import LabelAndStars from './LabelAndStars'
+
 
 const Properties = ({ item }) =>{
     const keys = Object.keys(item)
@@ -8,7 +10,8 @@ const Properties = ({ item }) =>{
 
     const features = keys.map((key, i) => {
         // return <Text>{key}: {item[key]}</Text>
-        return <LabelAndBar key={i} text={`${key} ${item[key]}`} value={item[key] / 5 * 100 } />
+        return <LabelAndStars key={i} text={`${key} ${item[key]}`} value={item[key]} />
+        //return <LabelAndBar key={i} text={`${key} ${item[key]}`} value={item[key] / 5 * 100 } />
     })
 
     return (
