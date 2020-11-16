@@ -4,10 +4,10 @@ import { View, Text } from 'react-native'
 export default function DetailsScreen() {
     const item = route.arams
     const keys = Object.keys(item)
-    
+    // const features = {()}
     return (
         <View>
-            <Text></Text>
+            <Text>This is working</Text>
         </View>
     )
 }

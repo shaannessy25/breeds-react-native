@@ -7,16 +7,15 @@ import Properties from './itemProperty'
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import HomeScreen from './screens/HomeScreen'
-
+import DetailsScreen from './screens/DetailsScreen'
 
 const Stack = createStackNavigator();
 
 export default function App() {
   const [ query, setQuery ] = useState('')
-  
   return (
 
-    <SafeAreaView style={styles.container}>
+    // <SafeAreaView style={styles.container}>
 
       <NavigationContainer>
         <Stack.Navigator initialRouteName="Home">
@@ -24,7 +23,7 @@ export default function App() {
           {/* <Stack.Screen name="Details" component={DetailsScreen} /> */}
         </Stack.Navigator>
       </NavigationContainer>
-      {/* <KeyboardAvoidingView
+      /* <KeyboardAvoidingView
         behavior={Platform.OS == "ios" ? "padding" : "height"}
         style={styles.container}
       >
@@ -44,8 +43,8 @@ export default function App() {
           value={query}
         />
         <StatusBar style="auto" />
-      </KeyboardAvoidingView> */}
-    </SafeAreaView>
+      </KeyboardAvoidingView> */
+    //</SafeAreaView>
   );
 }
 
@@ -54,7 +53,7 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#fff',
     alignItems: 'center',
-    justifyContent: 'flex-start',
+    // justifyContent: 'flex-start',
     width: '100%',
   },
   h1: {
