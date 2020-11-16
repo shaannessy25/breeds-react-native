@@ -1,13 +1,18 @@
 import React from 'react'
 import { View, Text } from 'react-native'
 
-export default function DetailsScreen() {
-    const item = route.arams
+export default function DetailsScreen({ route, navigation }) {
+    const item = route.params
     const keys = Object.keys(item)
-    // const features = {()}
+    const features = keys.map((key) => {
+        return (
+         <Text>{key}</Text>
+        )
+    })
     return (
         <View>
-            <Text>This is working</Text>
+            <Text>Details Screen</Text>
+            {features}
         </View>
     )
 }
